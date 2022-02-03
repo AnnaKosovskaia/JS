@@ -35,17 +35,14 @@
     }
 
     secondCard = this;
-    // hasFlippedCard = false;
 
     checkForMatch();
   }
 
-  // ф-я для сравнения кард
   function checkForMatch() {
     (firstCard.dataset.number === secondCard.dataset.number) ? disableCards() : unflipCards();
   }
 
-  // ф-я которая оставляет карточки перевернутыми
   function disableCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
@@ -53,7 +50,6 @@
     resetBoard();
   }
 
-  // ф-я кот возвращает карточки в исходное положение
   function unflipCards() {
     lockBoard = true;
 
@@ -72,45 +68,5 @@
 
 
 })();
-
-
-
-
-
-
-
-
-  // flipCard();
-
-  // card.classList.add('card', 'w-25', 'd-flex', 'align-items-center', 'justify-content-center'); //потом ширину сделать auto
-
-//   let cardsArray = [];
-//   let card;
-//   // ф-я которая создает карточки
-//   function createCards(count) {
-
-//     const container = document.querySelector('#container');
-//     const wrapper = document.createElement('ul');
-
-
-
-//     for (let i = 1; i <= count; i++) {
-//       card = document.createElement('div');
-//       card.classList.add('card', 'w-25', 'd-flex', 'align-items-center', 'justify-content-center'); //потом ширину сделать auto
-//       card.textContent = i;
-//       wrapper.append(card);
-//       console.log(wrapper);
-//     }
-
-
-
-//     container.classList.add('pt-5')
-//     wrapper.classList.add('d-flex', 'flex-wrap');
-
-//     container.append(wrapper);
-//   }
-
-
-//   createCards('16');
 
 
